@@ -1,6 +1,6 @@
-let readline = require("readline-sync")
-let nm = readline.question("digite seu seu nome: ")
-let idd = readline.question("digite sua idade: ")
+let rdl = require("readline-sync")
+let nm = rdl.question("digite seu seu nome: ")
+let idd = rdl.question("digite sua idade: ")
 if(idd <=0){
     console.log ('idade inválida')
 }
