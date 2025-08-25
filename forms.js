@@ -17,14 +17,14 @@ if (isNaN(idade) || idade <= 0) {
   const corFavorita = prompt("Digite sua cor favorita: ");
 
   console.log(`\n---- Formulário de ${nome}! ----`);
-  console.log(`Idade: ${idade}`);
-  console.log(`Data de nascimento: ${dataNascimento}`);
-  console.log(`Cor favorita: ${corFavorita}`);
+  console.log(`---- Idade: ${idade}`);
+  console.log(`---- Data de nascimento: ${dataNascimento}`);
+  console.log(`---- Cor favorita: ${corFavorita}`);
 
   // A verificação de maioridade agora está dentro do fluxo lógico correto.
   if (idade >= 18) {
-    console.log("Você é maior de idade.");
+    console.log("---- Você é maior de idade. ----");
   } else {
-    console.log("Você é menor de idade.");
+    console.log("---- Você é menor de idade. ----");
   }
 }
