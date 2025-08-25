@@ -1,18 +1,30 @@
-let prompt = require('prompt-sync')();
+const prompt = require("prompt-sync")();
 
-let nm = prompt('Digite seu nome: ');
-let idd = prompt('Digite sua idade: ');
-if(idd <= 0){
-  console.log('Idade inválida.');
-}else{
-let data = prompt('Digite sua data de nascimento: ');
-let corFav = prompt('Digite sua cor favorita: ');
+const nome = prompt("Digite seu nome: ");
+const idadeInput = prompt("Digite sua idade: ");
 
-console.log(`---- Formulário de ${nm}! ----`);
-console.log(`---- idade: ${idd}`);
-console.log(`---- data de nascimento: ${data}!`);
-console.log(`---- cor favorita: ${corFav}!`);
-}if(idd >= 18)
-  console.log('Você é maior de idade.');
-else
-  console.log('Você é menor de idade.');
+// Converte a entrada de idade para um número inteiro.
+const idade = parseInt(idadeInput, 10);
+
+// Verifica se a idade é um número válido e positivo.
+if (isNaN(idade) || idade <= 0) {
+  console.log(
+    "Idade inválida. Por favor, insira um número válido maior que zero."
+  );
+} else {
+  // Pede o resto das informações apenas se a idade for válida.
+  const dataNascimento = prompt("Digite sua data de nascimento: ");
+  const corFavorita = prompt("Digite sua cor favorita: ");
+
+  console.log(`\n---- Formulário de ${nome}! ----`);
+  console.log(`Idade: ${idade}`);
+  console.log(`Data de nascimento: ${dataNascimento}`);
+  console.log(`Cor favorita: ${corFavorita}`);
+
+  // A verificação de maioridade agora está dentro do fluxo lógico correto.
+  if (idade >= 18) {
+    console.log("Você é maior de idade.");
+  } else {
+    console.log("Você é menor de idade.");
+  }
+}
